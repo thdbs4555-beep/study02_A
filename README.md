@@ -8,6 +8,12 @@
 `index.html` 파일을 브라우저(Chrome, Edge, Safari, Firefox)로 열면 바로 실행됩니다.
 서버, 설치, 빌드 과정이 필요 없고 인터넷 연결 없이도 동작합니다.
 
+## 배포 (GitHub Pages)
+
+`index.html`, `style.css`, `app.js`가 바뀌어 푸시되면 `.github/workflows/pages.yml`이 GitHub Pages에 자동 배포합니다.
+처음 한 번은 저장소 **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 설정해야 합니다.
+배포 주소: `https://thdbs4555-beep.github.io/study/`
+
 ## 주요 기능
 
 - **할 일 추가**: 내용을 입력하고 카테고리를 고른 뒤 Enter 또는 "추가" 버튼 (최대 100자)
