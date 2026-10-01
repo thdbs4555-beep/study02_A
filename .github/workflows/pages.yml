@@ -30,7 +30,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # 앱 실행에 필요한 파일만 배포한다 (PRD 등 문서는 제외).
       - name: Prepare site
@@ -39,7 +39,7 @@ jobs:
           cp index.html style.css app.js _site/
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site
 

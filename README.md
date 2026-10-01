@@ -12,7 +12,7 @@
 
 `index.html`, `style.css`, `app.js`가 바뀌어 푸시되면 `.github/workflows/pages.yml`이 GitHub Pages에 자동 배포합니다.
 처음 한 번은 저장소 **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 설정해야 합니다.
-배포 주소: `https://thdbs4555-beep.github.io/study/`
+배포 주소: `https://thdbs4555-beep.github.io/study02_A/`
 
 ## 주요 기능
 
