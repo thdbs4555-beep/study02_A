@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오늘의 할 일</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1 class="app-title">오늘의 할 일</h1>
+      <div class="progress">
+        <p class="progress-label" aria-live="polite">
+          진행률 <strong id="progress-percent">0%</strong>
+          <span id="progress-count" class="progress-count">(0/0 완료)</span>
+        </p>
+        <div id="progress-bar" class="progress-track" role="progressbar"
+             aria-label="전체 진행률" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+      </div>
+    </header>
+
+    <form id="add-form" class="add-form" autocomplete="off">
+      <label class="visually-hidden" for="new-todo-text">할 일 내용</label>
+      <input id="new-todo-text" class="add-input" type="text" maxlength="100"
+             placeholder="할 일을 입력하세요">
+      <label class="visually-hidden" for="new-todo-category">카테고리</label>
+      <select id="new-todo-category" class="category-select">
+        <option value="work">업무</option>
+        <option value="personal">개인</option>
+        <option value="study">공부</option>
+      </select>
+      <button type="submit" class="btn btn-primary">추가</button>
+    </form>
+
+    <nav id="filters" class="filters" aria-label="카테고리 필터">
+      <button type="button" class="filter-tab" data-filter="all" aria-pressed="true">
+        전체 <span class="filter-count">0/0</span>
+      </button>
+      <button type="button" class="filter-tab" data-filter="work" aria-pressed="false">
+        업무 <span class="filter-count">0/0</span>
+      </button>
+      <button type="button" class="filter-tab" data-filter="personal" aria-pressed="false">
+        개인 <span class="filter-count">0/0</span>
+      </button>
+      <button type="button" class="filter-tab" data-filter="study" aria-pressed="false">
+        공부 <span class="filter-count">0/0</span>
+      </button>
+    </nav>
+
+    <ul id="todo-list" class="todo-list" aria-label="할 일 목록"></ul>
+    <p id="empty-state" class="empty-state" hidden></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
